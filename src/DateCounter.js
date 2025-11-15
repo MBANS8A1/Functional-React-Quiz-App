@@ -18,13 +18,13 @@ function DateCounter() {
   const dec = function () {
     // setCount((count) => count - 1);
     // setCount((count) => count - step);
-    dispatch(-1);
+    dispatch({ type: "dec", payload: -1 });
   };
 
   const inc = function () {
     // setCount((count) => count + 1);
     // setCount((count) => count + step);
-    dispatch(1);
+    dispatch({ type: "inc", payload: 1 });
   };
 
   const defineCount = function (e) {
