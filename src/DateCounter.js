@@ -10,13 +10,12 @@ function reducer(state, action) {
     case "dec":
       return { ...state, count: state.count - 1 };
 
+    case "setCount":
+      return { ...state, count: action.payload };
+
     default:
       throw new Error("Unknown action");
   }
-
-  //   if (action.type === "inc") return state + 1;
-  //   if (action.type === "dec") return state - 1;
-  //   if (action.type === "setCount") return action.payload;
 }
 
 function DateCounter() {
