@@ -9,7 +9,12 @@ const initialState = {
   status: "loading",
 };
 
-function reducer(state, action) {}
+function reducer(state, action) {
+  switch (action.type) {
+    case "dataReceived":
+      return { ...state, question: action.payload };
+  }
+}
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -18,7 +23,7 @@ function App() {
       try {
         const res = await fetch("http://localhost:8000/questions");
         const data = await res.json();
-        console.log(data);
+        dispatch({ type: "dataReceived", payload: data });
       } catch (err) {
         console.error(err);
       }
