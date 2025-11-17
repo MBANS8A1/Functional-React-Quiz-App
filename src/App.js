@@ -1,9 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import DateCounter from "./DateCounter.js";
 import Header from "./Header.js";
 import Main from "./Main.js";
 
+const initialState = {
+  questions: [],
+};
+
+function reducer(state, action) {}
+
 function App() {
+  const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(function () {
     async function fetchQuestions() {
       try {
