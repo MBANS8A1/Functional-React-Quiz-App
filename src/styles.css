@@ -70,3 +70,8 @@ h1 {
 img {
   width: 14rem;
 }
+
+/*For the main content*/
+.main {
+  width: 50rem;
+}
