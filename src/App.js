@@ -5,6 +5,8 @@ import Main from "./Main.js";
 
 const initialState = {
   questions: [],
+  //'loading', 'error', 'ready', 'active', 'finished'
+  status: "loading",
 };
 
 function reducer(state, action) {}
