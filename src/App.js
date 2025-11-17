@@ -31,7 +31,7 @@ function App() {
         const data = await res.json();
         dispatch({ type: "dataReceived", payload: data });
       } catch (err) {
-        console.error(err);
+        dispatch({ type: "dataFailed" });
       }
     }
     fetchQuestions();
