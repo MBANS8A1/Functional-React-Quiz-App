@@ -2,6 +2,8 @@ import { useEffect, useReducer } from "react";
 import DateCounter from "./DateCounter.js";
 import Header from "./Header.js";
 import Main from "./Main.js";
+import Loader from "./Loader.js";
+import Error from "./Loader.js";
 
 const initialState = {
   questions: [],
@@ -40,7 +42,10 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Main>{status}</Main>
+      <Main>
+        {status === "loading" && <Loader />}
+        {status === "error" && <Error />}
+      </Main>
     </div>
   );
 }
