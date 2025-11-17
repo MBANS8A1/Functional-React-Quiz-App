@@ -3,14 +3,19 @@ import DateCounter from "./DateCounter.js";
 import Header from "./Header.js";
 import Main from "./Main.js";
 
-useEffect(function () {
-  async function fetchQuestions() {
-    fetch("http://localhost:8000/questions");
-  }
-  fetchQuestions();
-}, []);
-
 function App() {
+  useEffect(function () {
+    async function fetchQuestions() {
+      try {
+        const res = await fetch("http://localhost:8000/questions");
+        const data = await res.json();
+        console.log(data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchQuestions();
+  }, []);
   return (
     <div className="app">
       <Header />
