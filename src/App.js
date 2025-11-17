@@ -1,13 +1,15 @@
 import DateCounter from "./DateCounter.js";
 import Header from "./Header.js";
+import Main from "./Main.js";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <main className="main">
+      <Main>
         <p>1/15</p>
-      </main>
+        <p>Question?</p>
+      </Main>
     </div>
   );
 }
