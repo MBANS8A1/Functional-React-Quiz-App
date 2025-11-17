@@ -1,9 +1,10 @@
 import DateCounter from "./DateCounter.js";
+import Header from "./Header.js";
 
 function App() {
   return (
     <div className="app">
-      <DateCounter />
+      <Header />
     </div>
   );
 }
