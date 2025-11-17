@@ -23,7 +23,8 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [{ questions, status }, dispatch] = useReducer(reducer, initialState);
+
   useEffect(function () {
     async function fetchQuestions() {
       try {
@@ -39,10 +40,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Main>
-        <p>1/15</p>
-        <p>Question?</p>
-      </Main>
+      <Main>{status}</Main>
     </div>
   );
 }
