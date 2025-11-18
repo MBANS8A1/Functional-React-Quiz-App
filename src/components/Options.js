@@ -8,6 +8,7 @@ function Options({ question, dispatch, answer }) {
           }`}
           key={qOption}
           onClick={() => dispatch({ type: "newAnswer", payload: index })}
+          disabled={answer !== null}
         >
           {qOption}
         </button>
