@@ -21,6 +21,9 @@ function reducer(state, action) {
     case "dataFailed":
       return { ...state, status: "error" };
 
+    case "start":
+      return { ...state, status: "active" };
+
     default:
       throw new Error("Action is unknown!");
   }
