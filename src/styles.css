@@ -81,6 +81,23 @@ img {
   width: 14rem;
 }
 
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.btn-ui {
+  float: right;
+}
+
 /*For the main content*/
 .main {
   width: 50rem;
