@@ -4,6 +4,9 @@ function Progress({ index, numQuestions }) {
       <p>
         Question <strong>{index + 1}</strong>/{numQuestions}
       </p>
+      <p>
+        <strong>{points}</strong>/{totalNumberOfPoints}
+      </p>
     </header>
   );
 }
