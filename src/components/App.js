@@ -82,6 +82,7 @@ function App() {
             dispatch={dispatch}
             answer={answer}
           />
+          <NextButton dispatch={dispatch} />
         )}
       </Main>
     </div>
