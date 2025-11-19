@@ -6,7 +6,7 @@ import Loader from "./Loader.js";
 import Error from "./Error.js";
 import StartScreen from "./StartScreen.js";
 import Question from "./Question.js";
-
+import NextButton from "./NextButton.js";
 const initialState = {
   questions: [],
   //'loading', 'error', 'ready', 'active', 'finished'
@@ -83,7 +83,7 @@ function App() {
               dispatch={dispatch}
               answer={answer}
             />
-            <NextButton dispatch={dispatch} />
+            <NextButton dispatch={dispatch} answer={answer} />
           </>
         )}
       </Main>
