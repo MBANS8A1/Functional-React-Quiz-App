@@ -7,6 +7,8 @@ import Error from "./Error.js";
 import StartScreen from "./StartScreen.js";
 import Question from "./Question.js";
 import NextButton from "./NextButton.js";
+import Progress from "./Progress.js";
+
 const initialState = {
   questions: [],
   //'loading', 'error', 'ready', 'active', 'finished'
@@ -78,6 +80,7 @@ function App() {
         )}
         {status === "active" && (
           <>
+            <Progress index={index} numQuestions={numQuestions} />
             <Question
               question={questions[index]}
               dispatch={dispatch}
