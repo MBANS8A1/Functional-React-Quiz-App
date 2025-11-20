@@ -9,8 +9,8 @@ function FinishedScreen({ points, maxPossiblePoints }) {
 
   return (
     <p className="result">
-      You scored <strong>{points}</strong> out of {maxPossiblePoints} (
-      {Math.ceil(scorePercentage)}%)
+      <span>{emoji}</span>You scored <strong>{points}</strong> out of{" "}
+      {maxPossiblePoints} ({Math.ceil(scorePercentage)}%)
     </p>
   );
 }
