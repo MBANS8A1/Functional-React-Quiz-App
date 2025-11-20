@@ -56,6 +56,10 @@ function App() {
   );
 
   const numQuestions = questions.length;
+  const maxPossiblePoints = questions.reduce(
+    (prev, curr) => prev + curr.points,
+    0
+  );
 
   useEffect(function () {
     async function fetchQuestions() {
@@ -84,6 +88,7 @@ function App() {
               index={index}
               numQuestions={numQuestions}
               points={points}
+              maxPossiblePoints={maxPossiblePoints}
             />
             <Question
               question={questions[index]}
