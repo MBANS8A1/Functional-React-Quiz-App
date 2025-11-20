@@ -100,7 +100,12 @@ function App() {
             <NextButton dispatch={dispatch} answer={answer} />
           </>
         )}
-        {status === "finished" && <FinishedScreen />}
+        {status === "finished" && (
+          <FinishedScreen
+            points={points}
+            maxPossiblePoints={maxPossiblePoints}
+          />
+        )}
       </Main>
     </div>
   );
