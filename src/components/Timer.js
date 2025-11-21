@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 function Timer() {
-  return <div className="timer">This is a Timer</div>;
+  useEffect(function () {
+    setInterval(function () {}, 1000);
+  }, []);
+  return <div className="timer">05:00</div>;
 }
 
 export default Timer;
