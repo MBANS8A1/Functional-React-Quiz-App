@@ -61,7 +61,7 @@ function reducer(state, action) {
       return { ...initialState, questions: state.questions, status: "ready" };
 
     case "tick":
-      return {};
+      return { ...state, secondsRemaining: state.secondsRemaining - 1 };
 
     default:
       throw new Error("Action is unknown!");
