@@ -12,6 +12,8 @@ import FinishedScreen from "./FinishedScreen.js";
 import Footer from "./Footer.js";
 import Timer from "./Timer.js";
 
+const SECONDS_PER_QUESTION = 25;
+
 const initialState = {
   questions: [],
   //'loading', 'error', 'ready', 'active', 'finished'
@@ -32,7 +34,11 @@ function reducer(state, action) {
       return { ...state, status: "error" };
 
     case "start":
-      return { ...state, status: "active" };
+      return {
+        ...state,
+        status: "active",
+        secondsRemaining: state.questions.length * SECONDS_PER_QUESTION,
+      };
 
     case "newAnswer":
       //getting current question
