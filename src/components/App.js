@@ -57,9 +57,11 @@ function reducer(state, action) {
           state.points > state.highscore ? state.points : state.highscore,
       };
 
-    case "restart": {
+    case "restart":
       return { ...initialState, questions: state.questions, status: "ready" };
-    }
+
+    case "tick":
+      return {};
 
     default:
       throw new Error("Action is unknown!");
@@ -112,7 +114,7 @@ function App() {
               answer={answer}
             />
             <Footer>
-              <Timer />
+              <Timer dispatch={dispatch} />
               <NextButton
                 dispatch={dispatch}
                 answer={answer}
