@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-function Timer({ dispatch }) {
+function Timer({ dispatch, secondsRemaining }) {
   useEffect(
     function () {
       setInterval(function () {
@@ -8,7 +8,7 @@ function Timer({ dispatch }) {
     },
     [dispatch]
   );
-  return <div className="timer">05:00</div>;
+  return <div className="timer">{secondsRemaining}</div>;
 }
 
 export default Timer;
