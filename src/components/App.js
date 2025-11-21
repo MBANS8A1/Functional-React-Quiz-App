@@ -10,6 +10,7 @@ import NextButton from "./NextButton.js";
 import Progress from "./Progress.js";
 import FinishedScreen from "./FinishedScreen.js";
 import Footer from "./Footer.js";
+import Timer from "./Timer.js";
 
 const initialState = {
   questions: [],
