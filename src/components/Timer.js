@@ -2,9 +2,11 @@ import { useEffect } from "react";
 function Timer({ dispatch, secondsRemaining }) {
   useEffect(
     function () {
-      setInterval(function () {
+      const intervalId = setInterval(function () {
         dispatch({ type: "tick" });
       }, 1000);
+
+      return () => clearInterval(intervalId);
     },
     [dispatch]
   );
